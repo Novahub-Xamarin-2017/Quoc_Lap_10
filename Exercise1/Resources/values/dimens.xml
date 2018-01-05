@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="margin">10dp</dimen>
+  <dimen name="image_width">60dp</dimen>
+  <dimen name="image_height">60dp</dimen>
+  <dimen name="corner_radius">10dp</dimen>
+  <dimen name="elevation">10dp</dimen>
+  <dimen name="padding">10dp</dimen>
+</resources>
