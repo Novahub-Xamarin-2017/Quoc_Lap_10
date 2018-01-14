@@ -1,6 +1,4 @@
-﻿using System;
-using Android.Runtime;
-using Android.Support.V7.Widget;
+﻿using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Com.Lilarcor.Cheeseknife;
@@ -13,8 +11,14 @@ namespace Exercise1.Models
         [InjectView(Resource.Id.tvName)] public TextView TvName;
         [InjectView(Resource.Id.tvVersion)] public TextView TvVersion;
 
-        public AndroidViewHolder(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        public VersionInfo VersionInfo
         {
+            set
+            {
+                TvName.Text = value.Name;
+                TvVersion.Text = value.Version;
+                Img.SetImageBitmap(Ultilites.Base64ToBitmap(value.Image));
+            }
         }
 
         public AndroidViewHolder(View itemView) : base(itemView)

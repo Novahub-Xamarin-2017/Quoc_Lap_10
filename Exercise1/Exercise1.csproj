@@ -133,6 +133,7 @@
     <Compile Include="Cheeseknife.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\AndroidViewHolder.cs" />
+    <Compile Include="Models\Ultilites.cs" />
     <Compile Include="Models\VersionInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
