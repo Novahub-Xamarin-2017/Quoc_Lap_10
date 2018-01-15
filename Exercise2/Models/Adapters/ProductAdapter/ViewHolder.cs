@@ -21,6 +21,10 @@ namespace Exercise2.Models.Adapters.ProductAdapter
 
         [InjectView(Resource.Id.btnAdd)] public ImageButton BtnAdd;
 
+        public int Index { get; set; }
+
+        private Product product;
+
         public Product Product
         {
             set
@@ -28,14 +32,26 @@ namespace Exercise2.Models.Adapters.ProductAdapter
                 TvName.Text = value.Name;
                 TvRs.Text = "Rs. " + value.UnitPrice;
                 TvUnit.Text = value.UnitType;
-                TvCount.Text = "0";
+                TvCount.Text = value.Count+"";
                 ImgProduct.SetImageBitmap(Ultilities.Base64ToBitmap(value.Image));
+                product = value;
             }
         }
 
         public ViewHolder(View itemView) : base(itemView)
         {
             Cheeseknife.Inject(this, itemView);
+            BtnSub.Click += (sender, e) =>
+            {
+                if (product.Count > 0)
+                {
+                    TvCount.Text = --product.Count + "";
+                }
+            };
+            BtnAdd.Click += (sender, e) =>
+            {
+                TvCount.Text = ++product.Count + "";
+            };
         }
     }
 }
