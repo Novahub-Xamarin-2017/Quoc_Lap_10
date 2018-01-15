@@ -21,8 +21,6 @@ namespace Exercise2.Models.Adapters.ProductAdapter
 
         [InjectView(Resource.Id.btnAdd)] public ImageButton BtnAdd;
 
-        public int Index { get; set; }
-
         private Product product;
 
         public Product Product
