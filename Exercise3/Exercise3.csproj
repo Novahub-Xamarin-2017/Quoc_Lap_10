@@ -123,9 +123,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Cheeseknife.cs" />
+    <Compile Include="Views\OpenFile.cs" />
+    <Compile Include="Views\MainActivity.cs" />
     <Compile Include="Models\Adapters\FileAdapter.cs" />
     <Compile Include="Models\Adapters\FileViewHolder.cs" />
+    <Compile Include="Models\ManagerItem.cs" />
+    <Compile Include="Models\Ultilities.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +140,15 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\Simple_Item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Play_Video_Layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Display_Image_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Play_Music_Layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
