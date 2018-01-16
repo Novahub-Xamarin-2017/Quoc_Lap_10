@@ -6,7 +6,7 @@ namespace Exercise3.Models
 {
     public class Ultilities
     {
-        public static List<ManagerItem> GetFileAndFolderNames(string path)
+        public static List<ManagerItem> GetFileNames(string path)
         {
             var mList = new List<ManagerItem>();
             var fileAndFolderNames = Directory.GetFileSystemEntries(path);
@@ -34,14 +34,14 @@ namespace Exercise3.Models
 
         private static bool IsImage(string name)
         {
-            var imageTag = new[] { ".png", ".jpg", ".gif" };
-            return imageTag.Any(name.Contains);
+            var imageExtensions = new[] { ".png", ".jpg", ".gif" };
+            return imageExtensions.Any(name.EndsWith);
         }
 
         private static bool IsMediaFile(string name)
         {
-            var mediaTag = new[] { ".avi", ".mp4", ".mkv", ".flv", ".mp3" };
-            return mediaTag.Any(name.Contains);
+            var mediaExtensions = new[] { ".avi", ".mp4", ".mkv", ".flv", ".mp3" };
+            return mediaExtensions.Any(name.EndsWith);
         }
 
         private static bool IsFolder(string name) => Directory.Exists(name);

@@ -2,7 +2,7 @@
 
 namespace Exercise3.Models
 {
-    public class ManagerItem : ISerializable
+    public class ManagerItem 
     {
         public int Image { get; set; }
 
@@ -16,11 +16,6 @@ namespace Exercise3.Models
         {
             Image = image;
             Name = name;
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

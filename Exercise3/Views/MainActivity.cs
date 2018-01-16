@@ -31,7 +31,7 @@ namespace Exercise3.Views
             SetContentView(Resource.Layout.Main);
 
             // init values
-            list = Ultilities.GetFileAndFolderNames(path);
+            list = Ultilities.GetFileNames(path);
             adapter = new FileAdapter(list);
 
             // set widgets 
@@ -49,7 +49,7 @@ namespace Exercise3.Views
                 {
                     case Resource.Drawable.folder32:
                         tvTitle.Text = path;
-                        adapter.UpdateAdapter(Ultilities.GetFileAndFolderNames(path));
+                        adapter.UpdateAdapter(Ultilities.GetFileNames(path));
                         break;
                     case Resource.Drawable.file32:
                         Toast.MakeText(this, path, ToastLength.Short).Show();
@@ -72,7 +72,7 @@ namespace Exercise3.Views
 
         public override void OnBackPressed()
         {
-            if (path == Environment.ExternalStorageDirectory.AbsolutePath)
+            if (path.EndsWith(Environment.ExternalStorageDirectory.AbsolutePath))
             {
                 Finish();
             }
@@ -80,7 +80,7 @@ namespace Exercise3.Views
             {
                 path = Directory.GetParent(path).ToString();
                 tvTitle.Text = path;
-                adapter.UpdateAdapter(Ultilities.GetFileAndFolderNames(path));
+                adapter.UpdateAdapter(Ultilities.GetFileNames(path));
             }
         }
     }
