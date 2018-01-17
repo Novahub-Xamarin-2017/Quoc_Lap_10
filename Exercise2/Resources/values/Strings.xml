@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise2</string>
+  <string name="name">Americon corn</string>
+  <string name="rs">Rs. 20</string>
+  <string name="unit">1 kg</string>
+  <string name="count">1</string>
+  <string name="money">1.000.000 vnd</string>
+  <string name="Sum">Sum</string>
+</resources>
