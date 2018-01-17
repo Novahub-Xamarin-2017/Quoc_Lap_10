@@ -35,23 +35,23 @@ namespace Exercise5.Controllers.Adapters
                 tvDeadline.Text = assignment.Deadline.ToShortDateString();
                 tvDuration.Text = assignment.Duration;
                 var timeRemainder = (assignment.Deadline - DateTime.Now).Days;
-                if (timeRemainder >= 0)
-                {
-                    btnStatus.Text = "  " + timeRemainder + (timeRemainder == 1 ? " Day left" : " Days left");
-                    btnStatus.SetCompoundDrawablesWithIntrinsicBounds(Resource.Drawable.countdown, 0, 0, 0);
-                    btnAction.Text = "  Resume";
-                    btnAction.SetCompoundDrawablesWithIntrinsicBounds(Resource.Drawable.circleplay, 0, 0, 0);
-                    statusLine.Background = new ColorDrawable(Color.PaleVioletRed);
-                }
+                if (timeRemainder < 0)
+                    SetButtonsAndStatusLine("  Completed", Resource.Drawable.ok, "  Report", Resource.Drawable.report,
+                        Color.Aqua);
                 else
-                {
-                    btnStatus.Text = "  Completed";
-                    btnStatus.SetCompoundDrawablesWithIntrinsicBounds(Resource.Drawable.ok, 0, 0, 0);
-                    btnAction.Text = "  Report";
-                    btnAction.SetCompoundDrawablesWithIntrinsicBounds(Resource.Drawable.report, 0, 0, 0);
-                    statusLine.Background = new ColorDrawable(Color.Aqua);
-                }
+                    SetButtonsAndStatusLine("  " + timeRemainder + (timeRemainder == 1 ? " Day left" : " Days left"),
+                        Resource.Drawable.countdown, "  Resume", Resource.Drawable.circleplay,
+                        Color.PaleVioletRed);
             }
+        }
+        
+        private void SetButtonsAndStatusLine(string status, int statusDrawable, string action, int actionDrawable, Color color)
+        {
+            btnStatus.Text = status;
+            btnStatus.SetCompoundDrawablesWithIntrinsicBounds(statusDrawable, 0, 0, 0);
+            btnAction.Text = action;
+            btnAction.SetCompoundDrawablesWithIntrinsicBounds(actionDrawable, 0, 0, 0);
+            statusLine.Background = new ColorDrawable(color);
         }
 
         public AssignmentHolder(View itemView) : base(itemView)

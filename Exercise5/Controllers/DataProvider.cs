@@ -14,10 +14,6 @@ namespace Exercise5.Controllers
 
         private DataProvider()
         {
-        }
-
-        public void LoadSampleData()
-        {
             Assignments = new List<Assignment>
             {
                 new Assignment("CS-101 Python", "Exercise 6", "Datastructures",

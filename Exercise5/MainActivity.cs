@@ -20,7 +20,6 @@ namespace Exercise5
             SetContentView(Resource.Layout.Main);
             Cheeseknife.Inject(this);
             provider = DataProvider.Instance;
-            provider.LoadSampleData();
             adapter = new AssignmentAdapter(provider.Assignments);
             rvAssignments.SetLayoutManager(new LinearLayoutManager(this));
             rvAssignments.SetAdapter(adapter);
