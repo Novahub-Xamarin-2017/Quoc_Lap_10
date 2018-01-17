@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise5</string>
+  <string name="course_name">CS-101 Python, </string>
+  <string name="exercise"> Exercise 6,</string>
+  <string name="lesson">Data Structure</string>
+  <string name="date">02/04/2018</string>
+  <string name="duration">60 Minutes</string>
+  <string name="status">Completed</string>
+  <string name="action">Report</string>
+</resources>
