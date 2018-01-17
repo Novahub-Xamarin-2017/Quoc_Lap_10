@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="phone_color_time">#222</color>
+  <color name="phone_color_name">#3498DB</color>
+  <color name="message_color_time">#666</color>
+  <color name="message_color_name">#E91E63</color>
+  <color name="message_color_content">#666</color>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:layout_margin="@dimen/card_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="@dimen/card_padding"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/message_image_size"
+            android:layout_height="@dimen/message_image_size"
+            android:src="@drawable/sms32" />
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/card_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/abc_text_size_subhead_material"
+                android:textColor="@color/message_color_name"
+                android:id="@+id/tvSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/text_size_name"
+                android:textColor="@color/message_color_content"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_below="@+id/tvSenderName"
+                android:id="@+id/tvMessageContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/text_size_time"
+                android:textColor="@color/message_color_time"
+                android:layout_marginTop="@dimen/card_content_margin"
+                android:layout_below="@+id/tvMessageContent"
+                android:id="@+id/tvMessageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
