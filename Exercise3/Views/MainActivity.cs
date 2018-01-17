@@ -58,7 +58,6 @@ namespace Exercise3.Views
                         OpenFileFromPath(managerItem);
                         break;
                 }
-
             };
         }
 
