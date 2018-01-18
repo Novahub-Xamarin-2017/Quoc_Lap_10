@@ -8,7 +8,7 @@ namespace Exercise6.Controllers.Adapters
     class NotificationAdapter : RecyclerView.Adapter
     {
         private const int TypeCall = 1, TypeMessage = 2;
-        private List<object> notifications;
+        private readonly List<object> notifications;
 
         public NotificationAdapter(List<object> notifications)
         {
@@ -17,11 +17,11 @@ namespace Exercise6.Controllers.Adapters
 
         public override int GetItemViewType(int position)
         {
-            if (notifications[position].GetType() == typeof(CallNotification) )
+            if (notifications[position] is CallNotification)
             {
                 return TypeCall;
             }
-            if (notifications[position].GetType() == typeof(MessageNotification))
+            if (notifications[position] is MessageNotification)
             {
                 return TypeMessage;
             }
@@ -46,14 +46,13 @@ namespace Exercise6.Controllers.Adapters
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
+            var layoutInflater = LayoutInflater.From(parent.Context);
             switch (viewType)
             {
                 case TypeCall:
-                    return new CallViewHolder(LayoutInflater.From(parent.Context)
-                        .Inflate(Resource.Layout.Call_Notification_Layout, parent, false));
+                    return new CallViewHolder(layoutInflater.Inflate(Resource.Layout.Call_Notification_Layout, parent, false));
                 case TypeMessage:
-                    return new MessageViewHolder(LayoutInflater.From(parent.Context)
-                        .Inflate(Resource.Layout.SMS_Notification_layout, parent, false));
+                    return new MessageViewHolder(layoutInflater.Inflate(Resource.Layout.SMS_Notification_layout, parent, false));
             }
             return null;
         }
