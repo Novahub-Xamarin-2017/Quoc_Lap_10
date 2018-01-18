@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="image_size">20dp</dimen>
+  <dimen name="content_margin">5dp</dimen>
+  <dimen name="layout_margin">10dp</dimen>
+  <dimen name="button_margin">2dp</dimen>
+  <dimen name="card_view_elevation">10dp</dimen>
+  <dimen name="card_view_radius">10dp</dimen>
+  <dimen name="status_line_height">5dp</dimen>
+  <dimen name="image_content_margin">40dp</dimen>
+  <dimen name="button_image_padding">10dp</dimen>
+  <dimen name="button_text_size">13sp</dimen>
+  <dimen name="text_date_time_size">12sp</dimen>
+</resources>

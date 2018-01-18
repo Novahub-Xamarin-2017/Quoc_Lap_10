@@ -6,7 +6,7 @@ namespace Exercise2.Models.Adapters.ProductAdapter
 {
     class ProductAdapter :RecyclerView.Adapter
     {
-        private List<Product> products;
+        private readonly List<Product> products;
 
         public ProductAdapter(List<Product> products)
         {
